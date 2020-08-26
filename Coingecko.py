@@ -26,7 +26,6 @@ class Coingecko:
         df = None
 
         while True:
-            print(i)
             params = {'vs_currency': 'usd',
                       'per_page': 250,
                       'page': i}
