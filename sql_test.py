@@ -8,10 +8,10 @@ sl = Sqlite(db_file)
 con = sl.create_connection()
 
 # get all items from db
-# query = 'SELECT * from coins'
-query = 'SELECT * from coins WHERE id="bitcoin"'
+query = 'SELECT * from coins'
+# query = 'SELECT * from coins WHERE id="bitcoin"'
 df = pd.read_sql_query(query, con)
-logger.info(str(df.shape) + ' items queried..')
+logger.info(str(df.shape[0]) + ' items queried..')
 
 
 # query = 'SELECT * from coins WHERE symbol="eth"'
